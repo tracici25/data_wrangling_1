@@ -5,6 +5,8 @@ output: github_document
 
 ```{r setup}
 library(tidyverse)
+library(readxl) # read excel
+library(haven) # read SAS
 ```
 
 ## Read in some data
@@ -52,6 +54,35 @@ View(litters_df) is another way to check the data
 but it is not very often used in RMD file
 bc it opens up a new window, which doesn't function so good with the knit
 so it is useful when using in console
+
+
+
+## Options to read_csv
+
+```{r}
+litters_df = read_csv("./data/FAS_litters.csv", skip = 10, col_names = FALSE)
+```
+
+
+check out `?read_csv()` for more information
+
+
+## Other file formats
+
+Read in an excel file
+```{r}
+mlb_df = read_excel("./data/mlb11.xlsx")
+mlb_df
+```
+
+Read in a SAS file.
+```{r}
+pulse_df = read_sas("./data/public_pulse_data.sas7bdat")
+pulse_df
+```
+
+
+
 
 
 
