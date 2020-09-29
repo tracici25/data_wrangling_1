@@ -29,6 +29,36 @@ litters_df = janitor::clean_names(litters_df)
 
 ## Take a look at the data
 
+Printing in the console
+
+```{r}
+litters_df
+```
+
+```{r}
+#another way to check the dataset
+#only to look at the first 6 rows
+head(litters_df)
+#check the last few rows
+tail(litters_df)
+```
+
+```{r}
+#we are not using library(skimr) bc we are only using the function skim()
+skimr::skim(litters_df)
+```
+
+View(litters_df) is another way to check the data
+but it is not very often used in RMD file
+bc it opens up a new window, which doesn't function so good with the knit
+so it is useful when using in console
+
+
+
+
+
+
+
 
 
 
