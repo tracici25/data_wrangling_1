@@ -116,3 +116,28 @@ mutate(
 #new variables created is always to the end
 
 ```
+
+##  `arrange`
+
+```{r}
+arrange(litters_df, pups_born_alive)
+```
+
+```{r}
+arrange(litters_df, pups_born_alive, gd0_weight)
+#arrange pup_born_alive first
+#then within pups variable, arrange gd0 weight
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
