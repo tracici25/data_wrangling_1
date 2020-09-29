@@ -95,3 +95,24 @@ filter(litters_df, group %in% c("Con7", "Mod8"))
 # see group = Con7 and Mod8
 ```
 
+##    `mutate`
+
+modify the existing variable or create some new variables
+
+```{r}
+mutate(litters_df, wt_gain = gd18_weight - gd0_weight)
+#create a new variable wt_gain
+# and the calculation is to be gd18_weight - gd0_weight
+```
+
+
+```{r}
+mutate(
+  litters_df,
+  wt_gain = gd18_weight - gd0_weight, #create new variable
+  group = str_to_lower(group)) #modify existing variable
+
+#the group = is to lowercase all group variables
+#new variables created is always to the end
+
+```
